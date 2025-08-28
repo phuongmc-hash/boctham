@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng Dụng Bốc Thăm Thi Đấu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span role="img" aria-label="trophy">🏆</span> Ứng Dụng Bốc Thăm Thi Đấu</h1>
+        </header>
+
+        <main>
+            <div class="competition-name-wrapper">
+                <label for="competition-name">Tên giải đấu / Môn thi đấu:</label>
+                <input type="text" id="competition-name" placeholder="Ví dụ: Giải bóng đá Mùa Hè 2025">
+            </div>
+
+            <div class="setup-section">
+                <div class="team-input-wrapper">
+                    <h2>1. Nhập danh sách đội</h2>
+                    <p>Nhập mỗi đội trên một dòng, hoặc dán danh sách từ ngoài vào.</p>
+                    <textarea id="team-input" rows="8" placeholder="Đội A&#10;Đội B&#10;Đội C..."></textarea>
+                    <button id="add-teams-button">Thêm vào danh sách</button>
+                </div>
+
+                <div class="format-selection-wrapper">
+                    <h2>2. Tùy chọn</h2>
+
+                    <label for="format-select" style="font-weight: 500;">Chọn thể thức thi đấu:</label>
+                    <select id="format-select" style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 20px;">
+                        <option value="knockout">Loại trực tiếp</option>
+                        <option value="round-robin">Vòng tròn tính điểm</option>
+                    </select>
+                    <div id="knockout-options" class="option-group">
+                        <input type="checkbox" id="auto-draw-checkbox" checked>
+                        <label for="auto-draw-checkbox">Tự động bốc thăm các vòng sau</label>
+                    </div>
+                    <h2 style="margin-top: 10px;">Danh sách đội thi đấu</h2>
+                    <ul id="teams-list"></ul>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="draw-button">Bốc thăm</button>
+                <button id="reset-button">Reset</button>
+                <button id="print-button" style="display: none;">In kết quả</button>
+            </div>
+
+            <div id="bracket-container" class="bracket-container">
+            </div>
+        </main>
+
+        <footer id="app-footer"></footer>
+    </div>
+
+    <script src="script.js"></script>
+    <audio id="drum-roll-sound" src="drum-roll.mp3" preload="auto" loop></audio>
+</body>
+</html>

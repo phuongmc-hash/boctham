@@ -1,0 +1,299 @@
+/* General Styling */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --danger-color: #dc3545;
+    --danger-hover: #c82333;
+    --border-color: #dee2e6;
+    --background-light: #f8f9fa;
+    --text-color: #343a40;
+    --tag-bg: #e9ecef;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: #fff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* <<< THÊM MỚI: CSS CHO KHU VỰC NHẬP TÊN GIẢI ĐẤU */
+.competition-name-wrapper {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+    .competition-name-wrapper label {
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+#competition-name {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+    #competition-name:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+
+
+/* Giao diện vùng nhập liệu */
+.setup-section {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.team-input-wrapper, .format-selection-wrapper {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+#team-input {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: vertical;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+    #team-input:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+
+#add-teams-button {
+    width: 100%;
+    padding: 10px;
+    font-weight: 500;
+    background-color: var(--primary-color);
+}
+
+    #add-teams-button:hover {
+        background-color: var(--primary-hover);
+    }
+
+.option-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+    .option-group label {
+        cursor: pointer;
+    }
+
+/* Danh sách đội dạng thẻ (tags) */
+#teams-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+    #teams-list li {
+        display: inline-flex;
+        align-items: center;
+        background-color: var(--tag-bg);
+        padding: 8px 14px;
+        border-radius: 16px;
+        font-weight: 600;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+
+.delete-team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    background-color: #ced4da;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .delete-team:hover {
+        background-color: #adb5bd;
+    }
+
+/* Controls */
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 5px 10px;
+}
+
+    button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+        opacity: 0.7;
+    }
+
+
+#draw-button {
+    background-color: var(--primary-color);
+}
+
+    #draw-button:hover:not(:disabled) {
+        background-color: var(--primary-hover);
+    }
+
+#reset-button {
+    background-color: var(--danger-color);
+}
+
+    #reset-button:hover:not(:disabled) {
+        background-color: var(--danger-hover);
+    }
+
+#print-button {
+    background-color: #28a745;
+}
+
+    #print-button:hover {
+        background-color: #218838;
+    }
+
+/* Styling cho bảng kết quả */
+.bracket-container {
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--background-light);
+    min-height: 100px;
+}
+
+.bracket-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* THÊM CSS CHO TIÊU ĐỀ IN */
+.competition-print-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+    margin-bottom: 40px;
+}
+
+    .result-table th, .result-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .result-table th {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+.team-name {
+    font-weight: 600;
+}
+
+.vs {
+    font-weight: normal;
+    color: var(--text-color);
+    margin: 0 8px;
+}
+
+@page {
+    margin: 1.5cm;
+}
+
+@media print {
+    body {
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .setup-section, .controls, header, footer, .competition-name-wrapper {
+        display: none;
+    }
+
+    .bracket-container {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+}
