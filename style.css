@@ -266,6 +266,14 @@ button {
     margin-bottom: 40px;
 }
 
+.knockout-table th:nth-child(1), .knockout-table td:nth-child(1) {
+    width: 33.33%;
+}
+
+.knockout-table th:nth-child(2), .knockout-table td:nth-child(2) {
+    width: 66.67%;
+}
+
     .result-table th, .result-table td {
         border: 1px solid #ddd;
         padding: 12px;
