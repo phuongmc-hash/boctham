@@ -2,6 +2,8 @@
 :root {
     --primary-color: #007bff;
     --primary-hover: #0056b3;
+    --secondary-color: #6c757d; /* Màu cho nút xáo trộn */
+    --secondary-hover: #5a6268;
     --danger-color: #dc3545;
     --danger-hover: #c82333;
     --border-color: #dee2e6;
@@ -34,7 +36,6 @@ header h1 {
     text-align: center;
 }
 
-/* <<< THÊM MỚI: CSS CHO KHU VỰC NHẬP TÊN GIẢI ĐẤU */
 .competition-name-wrapper {
     background: #fff;
     padding: 20px;
@@ -100,10 +101,27 @@ header h1 {
         box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
     }
 
+/* <<< THÊM MỚI: CSS CHO CÁC NÚT NHẬP LIỆU */
+.input-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+    .input-buttons button {
+        flex: 1;
+        padding: 10px;
+        font-weight: 500;
+    }
+
+#shuffle-button {
+    background-color: var(--secondary-color);
+}
+
+    #shuffle-button:hover {
+        background-color: var(--secondary-hover);
+    }
+
 #add-teams-button {
-    width: 100%;
-    padding: 10px;
-    font-weight: 500;
     background-color: var(--primary-color);
 }
 
@@ -232,7 +250,6 @@ button {
     margin-bottom: 30px;
 }
 
-/* THÊM CSS CHO TIÊU ĐỀ IN */
 .competition-print-title {
     text-align: center;
     font-size: 1.8rem;

@@ -23,7 +23,11 @@
                     <h2>1. Nhập danh sách đội</h2>
                     <p>Nhập mỗi đội trên một dòng, hoặc dán danh sách từ ngoài vào.</p>
                     <textarea id="team-input" rows="8" placeholder="Đội A&#10;Đội B&#10;Đội C..."></textarea>
-                    <button id="add-teams-button">Thêm vào danh sách</button>
+
+                    <div class="input-buttons">
+                        <button id="shuffle-button">Xáo trộn danh sách</button>
+                        <button id="add-teams-button">Thêm vào danh sách</button>
+                    </div>
                 </div>
 
                 <div class="format-selection-wrapper">
@@ -34,11 +38,13 @@
                         <option value="knockout">Loại trực tiếp</option>
                         <option value="round-robin">Vòng tròn tính điểm</option>
                     </select>
+
                     <div id="knockout-options" class="option-group">
                         <input type="checkbox" id="auto-draw-checkbox" checked>
                         <label for="auto-draw-checkbox">Tự động bốc thăm các vòng sau</label>
                     </div>
-                    <h2 style="margin-top: 10px;">Danh sách đội thi đấu</h2>
+
+                    <h2 style="margin-top: 20px;">Danh sách đội thi đấu</h2>
                     <ul id="teams-list"></ul>
                 </div>
             </div>
