@@ -32,7 +32,6 @@
 
                 <div class="format-selection-wrapper">
                     <h2>2. Tùy chọn</h2>
-
                     <label for="format-select" style="font-weight: 500;">Chọn thể thức thi đấu:</label>
                     <select id="format-select" style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 20px;">
                         <option value="knockout">Loại trực tiếp</option>
@@ -44,14 +43,16 @@
                         <label for="auto-draw-checkbox">Tự động bốc thăm các vòng sau</label>
                     </div>
 
-                    <h2 style="margin-top: 20px;">Danh sách đội thi đấu</h2>
+                    <h2 style="margin-top: 20px;">Danh sách đội thi đấu <span id="team-count">(0)</span></h2>
                     <ul id="teams-list"></ul>
                 </div>
             </div>
 
             <div class="controls">
+                <button id="load-button">Tải lịch thi đấu</button>
                 <button id="draw-button">Bốc thăm</button>
                 <button id="reset-button">Reset</button>
+                <button id="save-button" style="display: none;">Lưu kết quả</button>
                 <button id="print-button" style="display: none;">In kết quả</button>
             </div>
 
@@ -63,6 +64,7 @@
     </div>
 
     <script src="script.js"></script>
-    <audio id="drum-roll-sound" src="drum-roll.mp3" preload="auto" loop></audio>
+    <input type="file" id="file-loader" accept=".json" style="display: none;">
+    <audio id="drum-roll-sound" src="path/to/your/drum-roll.mp3" preload="auto" loop></audio>
 </body>
 </html>
