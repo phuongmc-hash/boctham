@@ -10,20 +10,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const resetButton = document.getElementById('reset-button');
     const printButton = document.getElementById('print-button');
     const bracketContainer = document.getElementById('bracket-container');
-	const knockoutOptions = document.getElementById('knockout-options');
+    const knockoutOptions = document.getElementById('knockout-options');
     const autoDrawCheckbox = document.getElementById('auto-draw-checkbox');
+    const teamCountElement = document.getElementById('team-count');
     const appFooter = document.getElementById('app-footer');
+    const saveButton = document.getElementById('save-button');
+    const loadButton = document.getElementById('load-button');
+    const fileLoader = document.getElementById('file-loader');
 
-    // Kiểm tra sự tồn tại của footer, nếu không có sẽ báo lỗi và dừng ứng dụng
+    let teams = [];
+    let savedSchedule = null;
+
     if (appFooter) {
         appFooter.innerHTML = '<p>Tạo bởi Phương Mr. (Gemini - Google AI)</p>';
     } else {
         alert('Lỗi: Cấu trúc HTML không hợp lệ. Vui lòng không chỉnh sửa file index.html.');
-        return; // Dừng toàn bộ script, ứng dụng sẽ không hoạt động
+        return;
     }
 
     const drumSound = document.getElementById('drum-roll-sound');
-    let teams = [];
 
     // --- 1. Xử lý nhập và quản lý đội ---
     addTeamsButton.addEventListener('click', handleAddTeams);
@@ -49,10 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleShuffleInput() {
         const inputText = teamInput.value;
         let lines = inputText.split('\n').filter(line => line.trim() !== '');
-
-        shuffleArray(lines); // Gọi hàm xáo trộn có sẵn
-
-        teamInput.value = lines.join('\n'); // Nối lại thành chuỗi và gán lại vào khung nhập
+        shuffleArray(lines);
+        teamInput.value = lines.join('\n');
     }
 
     function generateColor(index) {
@@ -79,11 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
             li.appendChild(deleteSpan);
             teamsList.appendChild(li);
         });
+        teamCountElement.textContent = `(${teams.length})`;
         bracketContainer.innerHTML = '';
         printButton.style.display = 'none';
+        saveButton.style.display = 'none';
     }
-	
-	// <<< THÊM LISTENER MỚI ĐỂ ẨN/HIỆN TÙY CHỌN
+
     formatSelect.addEventListener('change', toggleKnockoutOptions);
 
     function toggleKnockoutOptions() {
@@ -97,23 +101,149 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 2. Xử lý các nút điều khiển ---
     drawButton.addEventListener('click', handleDraw);
     resetButton.addEventListener('click', handleReset);
-
     printButton.addEventListener('click', handlePrint);
+    saveButton.addEventListener('click', handleSave);
+    loadButton.addEventListener('click', () => fileLoader.click());
+    fileLoader.addEventListener('change', handleFileLoad);
 
     function handlePrint() {
         const originalTitle = document.title;
         const competitionName = competitionNameInput.value.trim();
-
         if (competitionName) {
-            document.title = competitionName; // Tạm thời đổi tiêu đề trang
+            document.title = competitionName;
         }
-
-        window.print(); // Mở hộp thoại in
-
-        // Sau một khoảng trễ ngắn, trả lại tiêu đề cũ
+        window.print();
         setTimeout(() => {
             document.title = originalTitle;
         }, 500);
+    }
+
+    function handleSave() {
+        if (!savedSchedule) {
+            alert("Chưa có lịch thi đấu để lưu!");
+            return;
+        }
+        const competitionName = competitionNameInput.value.trim() || "Lich_thi_dau";
+        const filename = `${competitionName.replace(/ /g, "_")}.json`;
+        const dataToSave = {
+            competitionName: competitionNameInput.value,
+            teams: teams,
+            format: formatSelect.value,
+            schedule: savedSchedule
+        };
+        const jsonString = JSON.stringify(dataToSave, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+
+    function handleFileLoad(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            try {
+                const data = JSON.parse(e.target.result);
+                renderStateFromFile(data);
+            } catch (error) {
+                alert("File không hợp lệ hoặc đã bị lỗi.");
+                console.error("Lỗi parse JSON:", error);
+            }
+        };
+        reader.readAsText(file);
+        fileLoader.value = "";
+    }
+
+    function renderStateFromFile(data) {
+        competitionNameInput.value = data.competitionName;
+        teams = data.teams;
+        formatSelect.value = data.format;
+        savedSchedule = data.schedule;
+        updateTeamsList();
+        toggleKnockoutOptions();
+        bracketContainer.innerHTML = "";
+        
+        const competitionTitle = document.createElement('h1');
+        competitionTitle.className = 'competition-print-title';
+        competitionTitle.textContent = data.competitionName;
+        bracketContainer.appendChild(competitionTitle);
+
+        if (data.format === 'knockout') {
+            data.schedule.forEach(roundData => {
+                const roundTitle = document.createElement('h2');
+                roundTitle.className = 'bracket-title';
+                roundTitle.textContent = roundData.roundName;
+                bracketContainer.appendChild(roundTitle);
+                const table = document.createElement('table');
+                table.className = 'result-table';
+                const thead = table.createTHead();
+                const tbody = table.createTBody();
+                const headerText = roundData.matchPrefix === 'Cặp' || roundData.matchPrefix === 'Chung kết' ? 'Cặp đấu' : 'Trận đấu';
+                thead.innerHTML = `<tr><th style="width: 33.33%;">${headerText}</th><th style="width: 66.67%;">Đội thi đấu</th></tr>`;
+                roundData.pairings.forEach((pair, index) => {
+                    const row = tbody.insertRow();
+                    const matchPrefix = roundData.matchPrefix === "Chung kết" ? "Chung kết" : `${roundData.matchPrefix} ${index + 1}`;
+                    row.insertCell().innerHTML = `<b>${matchPrefix}</b>`;
+                    const cellMatchup = row.insertCell();
+                    if (pair.length === 1 || pair[1] === null || pair[1] === 'BYE') {
+                        cellMatchup.innerHTML = `${createTeamHTML(pair[0])} (${roundData.byeText})`;
+                    } else {
+                        cellMatchup.innerHTML = `${createTeamHTML(pair[0])} <span class="vs">vs</span> ${createTeamHTML(pair[1])}`;
+                    }
+                });
+                bracketContainer.appendChild(table);
+            });
+        } else { // <<< SỬA LỖI TẢI KẾT QUẢ VÒNG TRÒN
+            const mainTitle = document.createElement('h2');
+            mainTitle.className = 'bracket-title';
+            mainTitle.textContent = "Lịch thi đấu - Vòng tròn";
+            bracketContainer.appendChild(mainTitle);
+
+            const table = document.createElement('table');
+            table.className = 'result-table';
+            const thead = table.createTHead();
+            const tbody = table.createTBody();
+            
+            // Tạo tiêu đề bảng
+            if (data.schedule && data.schedule.length > 0) {
+                const firstRound = data.schedule[0];
+                let headerHTML = `<th>Vòng</th>`;
+                for (let i = 1; i <= firstRound.pairings.length; i++) {
+                    headerHTML += `<th>Cặp đấu ${i}</th>`;
+                }
+                thead.innerHTML = `<tr>${headerHTML}</tr>`;
+            }
+
+            // Điền dữ liệu các vòng
+            data.schedule.forEach(round => {
+                const row = tbody.insertRow();
+                row.insertCell().innerHTML = `<b>${round.roundName}</b>`;
+                round.pairings.forEach(pair => {
+                    const cell = row.insertCell();
+                    const team1 = pair[0];
+                    const team2 = pair[1];
+                    let matchCellHTML = '';
+                    if (team1.name === "BYE") {
+                        matchCellHTML = `${createTeamHTML(team2)} (Nghỉ)`;
+                    } else if (team2.name === "BYE") {
+                        matchCellHTML = `${createTeamHTML(team1)} (Nghỉ)`;
+                    } else {
+                        matchCellHTML = `${createTeamHTML(team1)} <span class="vs">vs</span> ${createTeamHTML(team2)}`;
+                    }
+                    cell.innerHTML = matchCellHTML;
+                });
+            });
+            bracketContainer.appendChild(table);
+        }
+        printButton.style.display = 'inline-block';
+        saveButton.style.display = 'inline-block';
+        bracketContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
 
     async function handleDraw() {
@@ -121,10 +251,9 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Vui lòng nhập ít nhất 2 đội.');
             return;
         }
-
+        savedSchedule = [];
         drawButton.disabled = true;
         resetButton.disabled = true;
-
         try {
             if (drumSound) {
                 drumSound.currentTime = 0;
@@ -132,14 +261,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     console.warn("Lỗi file âm thanh hoặc đường dẫn sai, bỏ qua...", error);
                 });
             }
-
             let shuffledTeams = [...teams];
             shuffleArray(shuffledTeams);
-
             const format = formatSelect.value;
             bracketContainer.innerHTML = '';
-
-            // <<< THÊM MỚI: Lấy và hiển thị tên giải đấu
             const competitionName = competitionNameInput.value.trim();
             if (competitionName) {
                 const titleElement = document.createElement('h1');
@@ -147,14 +272,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 titleElement.textContent = competitionName;
                 bracketContainer.appendChild(titleElement);
             }
-
             if (format === 'knockout') {
                 await generateKnockoutTable(shuffledTeams);
             } else {
                 await generateRoundRobinSchedule(shuffledTeams);
             }
+            saveButton.style.display = 'inline-block';
             printButton.style.display = 'inline-block';
-
         } catch (error) {
             console.error("Lỗi trong quá trình bốc thăm:", error);
             alert("Đã có lỗi xảy ra. Vui lòng kiểm tra Console (F12) để biết chi tiết.");
@@ -197,14 +321,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (teamsForBracket.length % 2 !== 0) {
             teamsForBracket.push('BYE');
         }
-
         const title = document.createElement('h2');
         title.className = 'bracket-title';
         title.textContent = 'Lịch thi đấu - Vòng 1';
         bracketContainer.appendChild(title);
 
+        const roundData = { roundName: 'Lịch thi đấu - Vòng 1', pairings: [], matchPrefix: 'Cặp', byeText: 'Miễn vòng 1' };
+        for (let i = 0; i < teamsForBracket.length; i += 2) {
+            roundData.pairings.push([teamsForBracket[i], teamsForBracket[i + 1]]);
+        }
+        savedSchedule.push(roundData);
+
         const table = document.createElement('table');
-        table.className = 'result-table knockout-table';
+        table.className = 'result-table';
         const thead = table.createTHead();
         const tbody = table.createTBody();
         thead.innerHTML = `<tr><th style="width: 33.33%;">Cặp đấu</th><th style="width: 66.67%;">Đội thi đấu</th></tr>`;
@@ -215,22 +344,21 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.innerHTML = `${createTeamHTML('???')} <span class="vs">vs</span> ${createTeamHTML('???')}`;
         }
         bracketContainer.appendChild(table);
-
         table.scrollIntoView({ behavior: 'smooth', block: 'center' });
         await animateKnockoutTable(tbody.rows, teamsForBracket, teams);
-
-        // <<< THAY ĐỔI LOGIC: KIỂM TRA CHECKBOX TRƯỚC KHI TẠO CÁC VÒNG SAU
         if (autoDrawCheckbox.checked) {
             await generateFutureRounds(teamsForBracket);
         }
     }
 
     async function generateRoundRobinSchedule(shuffledTeams) {
-        bracketContainer.innerHTML = `<h2 class="bracket-title">Lịch thi đấu - Vòng tròn</h2>`;
+        const mainTitle = document.createElement('h2');
+        mainTitle.className = 'bracket-title';
+        mainTitle.textContent = "Lịch thi đấu - Vòng tròn";
+        bracketContainer.appendChild(mainTitle);
+
         let scheduleTeams = [...shuffledTeams];
-        if (scheduleTeams.length % 2 !== 0) {
-            scheduleTeams.push("BYE");
-        }
+        if (scheduleTeams.length % 2 !== 0) { scheduleTeams.push("BYE"); }
         const numTeams = scheduleTeams.length;
         const numRounds = numTeams - 1;
         const half = numTeams / 2;
@@ -239,9 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const thead = table.createTHead();
         const tbody = table.createTBody();
         let headerHTML = `<th>Vòng</th>`;
-        for (let i = 1; i <= half; i++) {
-            headerHTML += `<th>Cặp đấu ${i}</th>`;
-        }
+        for (let i = 1; i <= half; i++) { headerHTML += `<th>Cặp đấu ${i}</th>`; }
         thead.innerHTML = `<tr>${headerHTML}</tr>`;
         for (let i = 0; i < numRounds; i++) {
             const row = tbody.insertRow();
@@ -251,53 +377,49 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         bracketContainer.appendChild(table);
+
         const finalSchedule = [];
         for (let round = 0; round < numRounds; round++) {
             const roundData = [];
             for (let i = 0; i < half; i++) {
                 roundData.push([scheduleTeams[i], scheduleTeams[numTeams - 1 - i]]);
             }
-            finalSchedule.push(roundData);
+            finalSchedule.push({ roundName: `Vòng ${round + 1}`, pairings: roundData });
             const lastTeam = scheduleTeams.pop();
             scheduleTeams.splice(1, 0, lastTeam);
         }
+        savedSchedule = finalSchedule;
+
         table.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        // Chờ animation hoàn tất
         await animateRoundRobinSchedule(tbody.rows, finalSchedule, teams);
-        // Sau đó mới bật lại nút
-        drawButton.disabled = false;
-        resetButton.disabled = false;
-        if (drumSound) drumSound.pause();
     }
 
-    async function animateKnockoutTable(rows, finalResult, allTeams) {
-        const animationTimePerCell = 2000;
+    async function animateKnockoutTable(rows, finalResult, animationPool) {
+        const animationTimePerCell = 1500;
         const spinSpeed = 80;
         for (let i = 0; i < rows.length; i++) {
             const cell = rows[i].cells[1];
             const intervalId = setInterval(() => {
-                const randomTeam1 = allTeams[Math.floor(Math.random() * allTeams.length)];
-                const randomTeam2 = allTeams[Math.floor(Math.random() * allTeams.length)];
-                cell.innerHTML = `${createTeamHTML(randomTeam1)} <span class="vs">vs</span> ${createTeamHTML(randomTeam2)}`;
+                const randomItem1 = animationPool[Math.floor(Math.random() * animationPool.length)];
+                const randomItem2 = animationPool[Math.floor(Math.random() * animationPool.length)];
+                cell.innerHTML = `${createTeamHTML(randomItem1)} <span class="vs">vs</span> ${createTeamHTML(randomItem2)}`;
             }, spinSpeed);
             await new Promise(resolve => setTimeout(resolve, animationTimePerCell));
             clearInterval(intervalId);
             const team1 = finalResult[i * 2];
             const team2 = finalResult[i * 2 + 1];
-
-            if (team2 === undefined) { // Xử lý đội miễn đấu ở các vòng sau
+            if (team2 === undefined) {
                 cell.innerHTML = `${createTeamHTML(team1)} (Miễn thi đấu)`;
-            }
-            else if (team2 === 'BYE') { // Xử lý đội miễn đấu ở Vòng 1
+            } else if (team2 === 'BYE') {
                 cell.innerHTML = `${createTeamHTML(team1)} (Miễn vòng 1)`;
-            } else { // Xử lý trận đấu bình thường
+            } else {
                 cell.innerHTML = `${createTeamHTML(team1)} <span class="vs">vs</span> ${createTeamHTML(team2)}`;
             }
         }
     }
 
     async function animateRoundRobinSchedule(rows, finalSchedule, allTeams) {
-        const animationTimePerCell = 2000;
+        const animationTimePerCell = 1000;
         const spinSpeed = 80;
         for (let i = 0; i < rows.length; i++) {
             const cellsToAnimate = Array.from(rows[i].cells).slice(1);
@@ -310,7 +432,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, spinSpeed);
                 await new Promise(resolve => setTimeout(resolve, animationTimePerCell));
                 clearInterval(intervalId);
-                const matchData = finalSchedule[i][j];
+                const matchData = finalSchedule[i].pairings[j];
                 const team1 = matchData[0];
                 const team2 = matchData[1];
                 if (team1 === "BYE") cell.innerHTML = `${createTeamHTML(team2)} (Nghỉ)`;
@@ -319,85 +441,60 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
-    // HÀM TẠO CÁC VÒNG ĐẤU SAU
+
     async function generateFutureRounds(firstRoundPairings) {
         let lastByeParticipant = null;
-
         const byeIndex = firstRoundPairings.indexOf('BYE');
         if (byeIndex !== -1) {
             lastByeParticipant = (byeIndex % 2 === 0) ? firstRoundPairings[byeIndex + 1] : firstRoundPairings[byeIndex - 1];
         }
-
         let currentRoundParticipants = [];
         for (let i = 0; i < firstRoundPairings.length; i += 2) {
             const team1 = firstRoundPairings[i];
             const team2 = firstRoundPairings[i + 1];
-            if (team1 === 'BYE') {
-                currentRoundParticipants.push(team2);
-            } else if (team2 === 'BYE') {
-                currentRoundParticipants.push(team1);
-            } else {
-                currentRoundParticipants.push(`Thắng Cặp ${i / 2 + 1} (Vòng 1)`);
-            }
+            if (team1 === 'BYE') { currentRoundParticipants.push(team2); }
+            else if (team2 === 'BYE') { currentRoundParticipants.push(team1); }
+            else { currentRoundParticipants.push(`Thắng Cặp ${i / 2 + 1} (Vòng 1)`); }
         }
-
         let roundNumber = 2;
         while (currentRoundParticipants.length > 1) {
+            let roundName = `Vòng ${roundNumber}`;
+            if (currentRoundParticipants.length === 2) roundName = "Chung kết";
+            else if (currentRoundParticipants.length <= 4 && currentRoundParticipants.length > 2) roundName = "Bán kết";
+            else if (currentRoundParticipants.length <= 8) roundName = "Tứ kết";
 
             if (currentRoundParticipants.length === 2) {
                 const finalTitle = document.createElement('h2');
                 finalTitle.className = 'bracket-title';
-                finalTitle.textContent = `Lịch thi đấu - Chung kết`;
+                finalTitle.textContent = `Lịch thi đấu - ${roundName}`;
                 bracketContainer.appendChild(finalTitle);
                 const finalTable = document.createElement('table');
                 finalTable.className = 'result-table';
                 finalTable.innerHTML = `<thead><tr><th style="width: 33.33%;">Cặp đấu</th><th style="width: 66.67%;">Đội thi đấu</th></tr></thead>
                 <tbody><tr><td><b>Chung kết</b></td><td>${createTeamHTML(currentRoundParticipants[0])} <span class="vs">vs</span> ${createTeamHTML(currentRoundParticipants[1])}</td></tr></tbody>`;
                 bracketContainer.appendChild(finalTable);
+                savedSchedule.push({ roundName: `Lịch thi đấu - ${roundName}`, pairings: [currentRoundParticipants], matchPrefix: 'Chung kết', byeText: '' });
                 finalTable.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 break;
             }
 
-            // <<< CẬP NHẬT LOGIC CHỐNG MIỄN ĐẤU 2 LẦN
             let attempts = 0;
-            const maxAttempts = 50; // Giới hạn an toàn
+            const maxAttempts = 50;
             while (attempts < maxAttempts) {
                 shuffleArray(currentRoundParticipants);
-
-                // Nếu số đội là chẵn, không có miễn đấu, bốc thăm luôn hợp lệ
-                if (currentRoundParticipants.length % 2 === 0) {
-                    break;
-                }
-
-                // Nếu vòng trước không có ai miễn đấu, bốc thăm luôn hợp lệ
-                if (!lastByeParticipant) {
-                    break;
-                }
-
-                // Lấy ra suất miễn đấu tiềm năng của vòng này
+                if (currentRoundParticipants.length % 2 === 0) { break; }
+                if (!lastByeParticipant) { break; }
                 const potentialByeParticipant = currentRoundParticipants[currentRoundParticipants.length - 1];
-
-                // Lấy định danh (tên) để so sánh
                 const lastByeIdentifier = (typeof lastByeParticipant === 'object' && lastByeParticipant !== null) ? lastByeParticipant.name : lastByeParticipant;
                 const potentialByeIdentifier = (typeof potentialByeParticipant === 'object' && potentialByeParticipant !== null) ? potentialByeParticipant.name : potentialByeParticipant;
-
-                // Nếu suất miễn đấu vòng này KHÁC với vòng trước, bốc thăm hợp lệ
-                if (lastByeIdentifier !== potentialByeIdentifier) {
-                    break;
-                }
-
-                // Nếu giống nhau, tiếp tục vòng lặp để xáo trộn lại
+                if (lastByeIdentifier !== potentialByeIdentifier) { break; }
                 attempts++;
             }
 
             const title = document.createElement('h2');
             title.className = 'bracket-title';
-            let roundName = `Vòng ${roundNumber}`;
-            if (currentRoundParticipants.length <= 4 && currentRoundParticipants.length > 2) roundName = "Bán kết";
-            else if (currentRoundParticipants.length <= 8) roundName = "Tứ kết";
             title.textContent = `Lịch thi đấu - ${roundName}`;
             bracketContainer.appendChild(title);
-
             const table = document.createElement('table');
             table.className = 'result-table';
             const thead = table.createTHead();
@@ -406,6 +503,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             let nextRoundParticipants = [];
             let currentByeInThisRound = null;
+            const roundData = { roundName: `Lịch thi đấu - ${roundName}`, pairings: [], matchPrefix: 'Cặp', byeText: 'Miễn thi đấu' };
 
             for (let i = 0; i < currentRoundParticipants.length; i += 2) {
                 const row = tbody.insertRow();
@@ -416,12 +514,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (participant2) {
                     cellMatchup.innerHTML = `${createTeamHTML('???')} <span class="vs">vs</span> ${createTeamHTML('???')}`;
                     nextRoundParticipants.push(`Thắng Cặp ${i / 2 + 1} (${roundName})`);
+                    roundData.pairings.push([participant1, participant2]);
                 } else {
                     cellMatchup.innerHTML = `${createTeamHTML('???')} (Miễn thi đấu)`;
                     nextRoundParticipants.push(participant1);
                     currentByeInThisRound = participant1;
+                    roundData.pairings.push([participant1, null]);
                 }
             }
+            savedSchedule.push(roundData);
             bracketContainer.appendChild(table);
             table.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
@@ -434,9 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     animationResult.push(undefined);
                 }
             }
-
             await animateKnockoutTable(tbody.rows, animationResult, currentRoundParticipants);
-
             lastByeParticipant = currentByeInThisRound;
             currentRoundParticipants = nextRoundParticipants;
             roundNumber++;
