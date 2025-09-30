@@ -2,10 +2,8 @@
 :root {
     --primary-color: #007bff;
     --primary-hover: #0056b3;
-    --secondary-color: #6c757d;
+    --secondary-color: #6c757d; /* Màu cho nút xáo trộn */
     --secondary-hover: #5a6268;
-    --info-color: #17a2b8; /* Màu cho nút Tải */
-    --info-hover: #138496;
     --danger-color: #dc3545;
     --danger-hover: #c82333;
     --border-color: #dee2e6;
@@ -69,6 +67,7 @@ header h1 {
         box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
     }
 
+
 /* Giao diện vùng nhập liệu */
 .setup-section {
     display: flex;
@@ -102,6 +101,7 @@ header h1 {
         box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
     }
 
+/* <<< THÊM MỚI: CSS CHO CÁC NÚT NHẬP LIỆU */
 .input-buttons {
     display: flex;
     gap: 10px;
@@ -142,17 +142,6 @@ header h1 {
     .option-group label {
         cursor: pointer;
     }
-
-/* <<< THÊM MỚI: CSS CHO SỐ ĐẾM */
-#team-count {
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--secondary-color);
-    background-color: var(--tag-bg);
-    padding: 2px 8px;
-    border-radius: 8px;
-    vertical-align: middle;
-}
 
 /* Danh sách đội dạng thẻ (tags) */
 #teams-list {
@@ -220,6 +209,7 @@ button {
         opacity: 0.7;
     }
 
+
 #draw-button {
     background-color: var(--primary-color);
 }
@@ -236,29 +226,12 @@ button {
         background-color: var(--danger-hover);
     }
 
-#load-button {
-    background-color: var(--info-color);
-}
-
-    #load-button:hover:not(:disabled) {
-        background-color: var(--info-hover);
-    }
-
 #print-button {
     background-color: #28a745;
 }
 
     #print-button:hover {
         background-color: #218838;
-    }
-
-#save-button {
-    background-color: #ffc107;
-    color: #212529;
-}
-
-    #save-button:hover {
-        background-color: #e0a800;
     }
 
 /* Styling cho bảng kết quả */
@@ -284,12 +257,21 @@ button {
     margin-bottom: 20px;
 }
 
+
 .result-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
     table-layout: fixed;
     margin-bottom: 40px;
+}
+
+.knockout-table th:nth-child(1), .knockout-table td:nth-child(1) {
+    width: 33.33%;
+}
+
+.knockout-table th:nth-child(2), .knockout-table td:nth-child(2) {
+    width: 66.67%;
 }
 
     .result-table th, .result-table td {
@@ -330,7 +312,7 @@ button {
         padding: 0;
     }
 
-    .competition-name-wrapper, .load-section, .setup-section, .controls, header, footer {
+    .setup-section, .controls, header, footer, .competition-name-wrapper {
         display: none;
     }
 

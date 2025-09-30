@@ -1,1 +1,445 @@
-(function(_0x11b6d1,_0x33bdd6){const _0x48781e=_0x2645,_0x136c55=_0x11b6d1();while(!![]){try{const _0x49830d=-parseInt(_0x48781e(0x181))/0x1*(parseInt(_0x48781e(0xea))/0x2)+parseInt(_0x48781e(0x10e))/0x3+parseInt(_0x48781e(0x15a))/0x4*(parseInt(_0x48781e(0x17d))/0x5)+parseInt(_0x48781e(0xf5))/0x6*(-parseInt(_0x48781e(0x182))/0x7)+-parseInt(_0x48781e(0x112))/0x8+parseInt(_0x48781e(0x17e))/0x9+-parseInt(_0x48781e(0x131))/0xa*(-parseInt(_0x48781e(0xfd))/0xb);if(_0x49830d===_0x33bdd6)break;else _0x136c55['push'](_0x136c55['shift']());}catch(_0x4b93a7){_0x136c55['push'](_0x136c55['shift']());}}}(_0x51a6,0x57b5a));function _0x2645(_0x108e30,_0x439622){const _0x5db8f0=_0x51a6();return _0x2645=function(_0x428d51,_0x459ca7){_0x428d51=_0x428d51-0xe5;let _0x51a603=_0x5db8f0[_0x428d51];return _0x51a603;},_0x2645(_0x108e30,_0x439622);}const _0x459ca7=(function(){let _0x5150e1=!![];return function(_0x57493e,_0xc04a2c){const _0x32e3c1=_0x5150e1?function(){const _0x549904=_0x2645;if(_0xc04a2c){const _0x12afd9=_0xc04a2c[_0x549904(0x172)](_0x57493e,arguments);return _0xc04a2c=null,_0x12afd9;}}:function(){};return _0x5150e1=![],_0x32e3c1;};}()),_0x428d51=_0x459ca7(this,function(){const _0x37b93a=_0x2645;return _0x428d51['toString']()[_0x37b93a(0x15b)]('(((.+)+)+)+$')[_0x37b93a(0x179)]()[_0x37b93a(0x14b)](_0x428d51)['search']('(((.+)+)+)+$');});_0x428d51(),document['addEventListener']('DOMContentLoaded',()=>{const _0x4e60b6=_0x2645,_0x24d633=document['getElementById']('competition-name'),_0x292a8f=document[_0x4e60b6(0x148)](_0x4e60b6(0x17f)),_0x457417=document['getElementById']('add-teams-button'),_0x2f93a6=document[_0x4e60b6(0x148)]('shuffle-button'),_0x9f5a31=document[_0x4e60b6(0x148)]('teams-list'),_0x23550a=document['getElementById'](_0x4e60b6(0x152)),_0x64f6db=document['getElementById'](_0x4e60b6(0x14a)),_0x2b5109=document['getElementById'](_0x4e60b6(0x170)),_0x395efb=document[_0x4e60b6(0x148)]('print-button'),_0x111c78=document['getElementById'](_0x4e60b6(0xf7)),_0x1b3920=document[_0x4e60b6(0x148)](_0x4e60b6(0x143)),_0x54ac77=document['getElementById'](_0x4e60b6(0x171)),_0x1326ee=document['getElementById'](_0x4e60b6(0x134)),_0x2955bd=document['getElementById'](_0x4e60b6(0x144)),_0x646611=document[_0x4e60b6(0x148)](_0x4e60b6(0x104)),_0x3212a4=document['getElementById'](_0x4e60b6(0x142)),_0x14a784=document['getElementById'](_0x4e60b6(0x12a));let _0x3c4950=[],_0x335008=null;if(_0x2955bd){if('HIktX'===_0x4e60b6(0x151))_0x2955bd[_0x4e60b6(0x114)]=_0x4e60b6(0x109);else{const _0x15df65=_0x2ecb3d[_0x4e60b6(0x135)]();_0x15df65[_0x4e60b6(0x15f)]()[_0x4e60b6(0x114)]=_0x4e60b6(0xf9)+(_0x58da28+0x1)+_0x4e60b6(0x110);const _0x4d49e7=_0x15df65[_0x4e60b6(0x15f)]();_0x4d49e7[_0x4e60b6(0x114)]=_0x2cbdd4('???')+_0x4e60b6(0x150)+_0x458b9e('???');}}else{alert(_0x4e60b6(0x153));return;}const _0x40ca69=document['getElementById'](_0x4e60b6(0x13f));_0x457417['addEventListener']('click',_0x5ae2e3),_0x2f93a6[_0x4e60b6(0x14f)](_0x4e60b6(0x116),_0x180a24);function _0x5ae2e3(){const _0x3518fc=_0x4e60b6,_0x1b64d3=_0x292a8f[_0x3518fc(0x127)],_0x5d0bec=_0x1b64d3['split']('\x0a')[_0x3518fc(0x139)](_0x5c6d8b=>_0x5c6d8b[_0x3518fc(0x115)]()!=='');_0x5d0bec[_0x3518fc(0x168)](_0x4aa464=>{const _0x8076df=_0x3518fc,_0x2364ac=_0x4aa464['trim']();if(_0x2364ac&&!_0x3c4950['some'](_0x42aaaf=>_0x42aaaf['name']===_0x2364ac)){if('NXFuk'===_0x8076df(0xf4)){const _0xd66e69={'name':_0x2364ac,'color':_0x40f2c3(_0x3c4950[_0x8076df(0xef)])};_0x3c4950[_0x8076df(0x178)](_0xd66e69);}else _0x91bf16['push']('Thắng\x20Cặp\x20'+(_0xc2f7cf/0x2+0x1)+_0x8076df(0xeb));}}),_0x4bdbe5(),_0x292a8f['value']='';}function _0x180a24(){const _0x300dfd=_0x4e60b6,_0x20f2e6=_0x292a8f[_0x300dfd(0x127)];let _0x2f9e64=_0x20f2e6[_0x300dfd(0x125)]('\x0a')[_0x300dfd(0x139)](_0x12a798=>_0x12a798['trim']()!=='');_0x2c5c86(_0x2f9e64),_0x292a8f[_0x300dfd(0x127)]=_0x2f9e64[_0x300dfd(0x102)]('\x0a');}function _0x40f2c3(_0x475c0d){const _0x531a3a=_0x4e60b6,_0x16fbc5=_0x475c0d*0x28%0x168;return _0x531a3a(0x124)+_0x16fbc5+_0x531a3a(0x126);}function _0x4bdbe5(){const _0x334417=_0x4e60b6;_0x334417(0xf1)!=='uiiuO'?(_0x9f5a31['innerHTML']='',_0x3c4950[_0x334417(0x168)]((_0x4e97b1,_0x327639)=>{const _0x353e14=_0x334417,_0x21251c=document['createElement']('li');_0x21251c[_0x353e14(0x118)]=_0x4e97b1[_0x353e14(0xe9)],_0x21251c[_0x353e14(0x157)][_0x353e14(0xf2)]=_0x4e97b1[_0x353e14(0xf2)];const _0x328b71=document['createElement']('span');_0x328b71['innerHTML']=_0x353e14(0x17c),_0x328b71['className']=_0x353e14(0x176),_0x328b71[_0x353e14(0x107)]=()=>{const _0x208428=_0x353e14;_0x3c4950['splice'](_0x327639,0x1),_0x3c4950[_0x208428(0x168)]((_0x6c35a6,_0x45ac42)=>{const _0x315dcb=_0x208428;if(_0x315dcb(0x111)===_0x315dcb(0xff)){const _0x5a7e8a=_0x18c1f3['parse'](_0x2fac4b[_0x315dcb(0x128)][_0x315dcb(0xe5)]);_0x17f42c(_0x5a7e8a);}else _0x6c35a6[_0x315dcb(0xf2)]=_0x40f2c3(_0x45ac42);}),_0x4bdbe5();},_0x21251c['appendChild'](_0x328b71),_0x9f5a31[_0x353e14(0xe7)](_0x21251c);}),_0x1326ee[_0x334417(0x118)]='('+_0x3c4950['length']+')',_0x111c78[_0x334417(0x114)]='',_0x395efb[_0x334417(0x157)]['display']=_0x334417(0x160),_0x646611[_0x334417(0x157)][_0x334417(0x16e)]='none'):_0x2e19cc['style'][_0x334417(0x16e)]=_0x334417(0x160);}_0x23550a[_0x4e60b6(0x14f)]('change',_0x40b8d6);function _0x40b8d6(){const _0x136101=_0x4e60b6;_0x23550a[_0x136101(0x127)]==='knockout'?_0x1b3920[_0x136101(0x157)]['display']='flex':_0x1b3920[_0x136101(0x157)]['display']=_0x136101(0x160);}_0x64f6db[_0x4e60b6(0x14f)]('click',_0x449e7b),_0x2b5109[_0x4e60b6(0x14f)](_0x4e60b6(0x116),_0x55e610),_0x395efb[_0x4e60b6(0x14f)](_0x4e60b6(0x116),_0x220b8d),_0x646611['addEventListener'](_0x4e60b6(0x116),_0x1f83f2),_0x3212a4[_0x4e60b6(0x14f)]('click',()=>_0x14a784[_0x4e60b6(0x116)]()),_0x14a784[_0x4e60b6(0x14f)]('change',_0x23deee);function _0x220b8d(){const _0x144a4a=_0x4e60b6;if(_0x144a4a(0x13e)!==_0x144a4a(0x166)){const _0xc8b918=document[_0x144a4a(0x15c)],_0x54cc47=_0x24d633[_0x144a4a(0x127)][_0x144a4a(0x115)]();_0x54cc47&&(document['title']=_0x54cc47),window[_0x144a4a(0x113)](),setTimeout(()=>{document['title']=_0xc8b918;},0x1f4);}else{_0x490e9c(_0x144a4a(0xf0));return;}}function _0x1f83f2(){const _0x1aef12=_0x4e60b6;if(!_0x335008){alert(_0x1aef12(0xfa));return;}const _0xc0c52d=_0x24d633[_0x1aef12(0x127)][_0x1aef12(0x115)]()||_0x1aef12(0x17a),_0x2db59a=_0xc0c52d['replace'](/ /g,'_')+_0x1aef12(0x119),_0x45d8ef={'competitionName':_0x24d633[_0x1aef12(0x127)],'teams':_0x3c4950,'format':_0x23550a[_0x1aef12(0x127)],'schedule':_0x335008},_0x3be35e=JSON[_0x1aef12(0x145)](_0x45d8ef,null,0x2),_0x1d8ef2=new Blob([_0x3be35e],{'type':_0x1aef12(0xf6)}),_0x33ebcc=URL[_0x1aef12(0x105)](_0x1d8ef2),_0x557980=document[_0x1aef12(0xee)]('a');_0x557980[_0x1aef12(0x132)]=_0x33ebcc,_0x557980['download']=_0x2db59a,document['body'][_0x1aef12(0xe7)](_0x557980),_0x557980[_0x1aef12(0x116)](),document[_0x1aef12(0x175)]['removeChild'](_0x557980),URL[_0x1aef12(0x177)](_0x33ebcc);}function _0x23deee(_0x4495f3){const _0x4dc08e=_0x4e60b6,_0x32114e=_0x4495f3[_0x4dc08e(0x128)]['files'][0x0];if(!_0x32114e)return;const _0x5126f4=new FileReader();_0x5126f4['onload']=function(_0x47f3d4){const _0x298f11=_0x4dc08e;try{const _0x23a916=JSON[_0x298f11(0x16a)](_0x47f3d4[_0x298f11(0x128)]['result']);_0x190eeb(_0x23a916);}catch(_0x33a163){alert(_0x298f11(0x13b)),console['error'](_0x298f11(0x11c),_0x33a163);}},_0x5126f4['readAsText'](_0x32114e),_0x14a784['value']='';}function _0x190eeb(_0x56f543){const _0x2c0b4c=_0x4e60b6;_0x24d633[_0x2c0b4c(0x127)]=_0x56f543['competitionName'],_0x3c4950=_0x56f543[_0x2c0b4c(0x162)],_0x23550a[_0x2c0b4c(0x127)]=_0x56f543['format'],_0x335008=_0x56f543['schedule'],_0x4bdbe5(),_0x40b8d6(),_0x111c78[_0x2c0b4c(0x114)]='';const _0x258db3=document['createElement']('h1');_0x258db3[_0x2c0b4c(0x161)]='competition-print-title',_0x258db3[_0x2c0b4c(0x118)]=_0x56f543[_0x2c0b4c(0x11a)],_0x111c78['appendChild'](_0x258db3);if(_0x56f543[_0x2c0b4c(0x156)]===_0x2c0b4c(0x108))_0x56f543[_0x2c0b4c(0x10f)][_0x2c0b4c(0x168)](_0x525901=>{const _0x5b950c=_0x2c0b4c,_0x591c11=document['createElement']('h2');_0x591c11[_0x5b950c(0x161)]=_0x5b950c(0x159),_0x591c11[_0x5b950c(0x118)]=_0x525901['roundName'],_0x111c78[_0x5b950c(0xe7)](_0x591c11);const _0x1a354e=document[_0x5b950c(0xee)](_0x5b950c(0x154));_0x1a354e[_0x5b950c(0x161)]='result-table';const _0x51954d=_0x1a354e[_0x5b950c(0x100)](),_0x9a4d6b=_0x1a354e[_0x5b950c(0xe6)](),_0x1a6c85=_0x525901['matchPrefix']===_0x5b950c(0xfb)||_0x525901[_0x5b950c(0x167)]==='Chung\x20kết'?'Cặp\x20đấu':'Trận\x20đấu';_0x51954d[_0x5b950c(0x114)]='<tr><th\x20style=\x22width:\x2033.33%;\x22>'+_0x1a6c85+_0x5b950c(0x10d),_0x525901[_0x5b950c(0x180)]['forEach']((_0xe438ce,_0x512af0)=>{const _0x307b81=_0x5b950c;if('KiTvl'!==_0x307b81(0x158)){const _0x154888=_0x9a4d6b[_0x307b81(0x135)](),_0xb57de4=_0x525901[_0x307b81(0x167)]==='Chung\x20kết'?_0x307b81(0x141):_0x525901[_0x307b81(0x167)]+'\x20'+(_0x512af0+0x1);_0x154888[_0x307b81(0x15f)]()[_0x307b81(0x114)]='<b>'+_0xb57de4+_0x307b81(0x110);const _0x467c44=_0x154888[_0x307b81(0x15f)]();if(_0xe438ce[_0x307b81(0xef)]===0x1||_0xe438ce[0x1]===null||_0xe438ce[0x1]===_0x307b81(0x129)){if(_0x307b81(0x101)==='pKktC'){const _0x3d05c2=_0x55632d['insertCell'](),_0x4b928e=_0x3397a4[0x0],_0x3a449f=_0xd44a16[0x1];let _0x4c1ae0='';if(_0x4b928e[_0x307b81(0xe9)]===_0x307b81(0x129))_0x4c1ae0=_0x3efbbd(_0x3a449f)+_0x307b81(0x15e);else _0x3a449f['name']===_0x307b81(0x129)?_0x4c1ae0=_0x4d55dd(_0x4b928e)+_0x307b81(0x15e):_0x4c1ae0=_0x2885da(_0x4b928e)+'\x20<span\x20class=\x22vs\x22>vs</span>\x20'+_0xd00fb2(_0x3a449f);_0x3d05c2[_0x307b81(0x114)]=_0x4c1ae0;}else _0x467c44[_0x307b81(0x114)]=_0x2076e5(_0xe438ce[0x0])+'\x20('+_0x525901['byeText']+')';}else _0x467c44[_0x307b81(0x114)]=_0x2076e5(_0xe438ce[0x0])+_0x307b81(0x150)+_0x2076e5(_0xe438ce[0x1]);}else _0x16d904['push'](_0x1befaf);}),_0x111c78[_0x5b950c(0xe7)](_0x1a354e);});else{const _0x30448f=document[_0x2c0b4c(0xee)]('h2');_0x30448f['className']='bracket-title',_0x30448f[_0x2c0b4c(0x118)]='Lịch\x20thi\x20đấu\x20-\x20Vòng\x20tròn',_0x111c78['appendChild'](_0x30448f);const _0x2e4201=document['createElement'](_0x2c0b4c(0x154));_0x2e4201[_0x2c0b4c(0x161)]=_0x2c0b4c(0x16d);const _0x10bb1a=_0x2e4201[_0x2c0b4c(0x100)](),_0x13e0d0=_0x2e4201['createTBody']();if(_0x56f543['schedule']&&_0x56f543[_0x2c0b4c(0x10f)][_0x2c0b4c(0xef)]>0x0){const _0x3c2e81=_0x56f543[_0x2c0b4c(0x10f)][0x0];let _0x2ef587=_0x2c0b4c(0x120);for(let _0x42b4f1=0x1;_0x42b4f1<=_0x3c2e81['pairings'][_0x2c0b4c(0xef)];_0x42b4f1++){_0x2ef587+=_0x2c0b4c(0x14e)+_0x42b4f1+'</th>';}_0x10bb1a[_0x2c0b4c(0x114)]=_0x2c0b4c(0xfe)+_0x2ef587+'</tr>';}_0x56f543['schedule']['forEach'](_0xde825f=>{const _0x167345=_0x2c0b4c;if('UQeoE'!==_0x167345(0xec)){const _0x349b03=_0x4dfa27['createElement']('h2');_0x349b03[_0x167345(0x161)]='bracket-title',_0x349b03[_0x167345(0x118)]=_0x1be589[_0x167345(0x173)],_0x303e74[_0x167345(0xe7)](_0x349b03);const _0x3a335b=_0x34bca1[_0x167345(0xee)](_0x167345(0x154));_0x3a335b['className']='result-table';const _0x2c657f=_0x3a335b[_0x167345(0x100)](),_0x44bb39=_0x3a335b[_0x167345(0xe6)](),_0x4fab33=_0x4aa18a[_0x167345(0x167)]===_0x167345(0xfb)||_0x2e2b50[_0x167345(0x167)]==='Chung\x20kết'?'Cặp\x20đấu':'Trận\x20đấu';_0x2c657f[_0x167345(0x114)]='<tr><th\x20style=\x22width:\x2033.33%;\x22>'+_0x4fab33+_0x167345(0x10d),_0x2679aa['pairings'][_0x167345(0x168)]((_0x26aaf9,_0x367906)=>{const _0x2cce4c=_0x167345,_0x415df6=_0x44bb39[_0x2cce4c(0x135)](),_0x4d60fd=_0x1a2dcb['matchPrefix']===_0x2cce4c(0x141)?_0x2cce4c(0x141):_0x4e6ed6['matchPrefix']+'\x20'+(_0x367906+0x1);_0x415df6[_0x2cce4c(0x15f)]()['innerHTML']='<b>'+_0x4d60fd+_0x2cce4c(0x110);const _0x25c535=_0x415df6[_0x2cce4c(0x15f)]();_0x26aaf9[_0x2cce4c(0xef)]===0x1||_0x26aaf9[0x1]===null||_0x26aaf9[0x1]==='BYE'?_0x25c535[_0x2cce4c(0x114)]=_0x3f4d9b(_0x26aaf9[0x0])+'\x20('+_0x100777['byeText']+')':_0x25c535['innerHTML']=_0x349aa3(_0x26aaf9[0x0])+_0x2cce4c(0x150)+_0x173466(_0x26aaf9[0x1]);}),_0x3967d8[_0x167345(0xe7)](_0x3a335b);}else{const _0x14484e=_0x13e0d0[_0x167345(0x135)]();_0x14484e['insertCell']()['innerHTML']=_0x167345(0x17b)+_0xde825f[_0x167345(0x173)]+_0x167345(0x110),_0xde825f['pairings']['forEach'](_0x3ce833=>{const _0x459732=_0x167345,_0x4be44e=_0x14484e[_0x459732(0x15f)](),_0x410701=_0x3ce833[0x0],_0x5d3b35=_0x3ce833[0x1];let _0x5e9d60='';if(_0x410701[_0x459732(0xe9)]==='BYE'){if(_0x459732(0x11b)===_0x459732(0x16b)){const _0x3f4dad=_0x4dcf4a[_0x459732(0x135)]();_0x3f4dad['insertCell']()[_0x459732(0x114)]=_0x459732(0x10a)+(_0x92f0cc+0x1)+_0x459732(0x110);for(let _0x522f57=0x0;_0x522f57<_0x1ca4c7;_0x522f57++){_0x3f4dad[_0x459732(0x15f)]()[_0x459732(0x114)]=''+_0x20bbce(_0x459732(0x103));}}else _0x5e9d60=_0x2076e5(_0x5d3b35)+_0x459732(0x15e);}else _0x5d3b35['name']==='BYE'?_0x5e9d60=_0x2076e5(_0x410701)+_0x459732(0x15e):_0x5e9d60=_0x2076e5(_0x410701)+_0x459732(0x150)+_0x2076e5(_0x5d3b35);_0x4be44e[_0x459732(0x114)]=_0x5e9d60;});}}),_0x111c78[_0x2c0b4c(0xe7)](_0x2e4201);}_0x395efb[_0x2c0b4c(0x157)][_0x2c0b4c(0x16e)]='inline-block',_0x646611[_0x2c0b4c(0x157)][_0x2c0b4c(0x16e)]=_0x2c0b4c(0x149),_0x111c78['scrollIntoView']({'behavior':_0x2c0b4c(0x12f),'block':_0x2c0b4c(0xf8)});}async function _0x449e7b(){const _0xe3d706=_0x4e60b6;if(_0x3c4950[_0xe3d706(0xef)]<0x2){alert('Vui\x20lòng\x20nhập\x20ít\x20nhất\x202\x20đội.');return;}_0x335008=[],_0x64f6db[_0xe3d706(0x140)]=!![],_0x2b5109['disabled']=!![];try{_0x40ca69&&(_0x40ca69[_0xe3d706(0x169)]=0x0,_0x40ca69[_0xe3d706(0x16f)]()[_0xe3d706(0x106)](_0x18be10=>{const _0x35a8d8=_0xe3d706;console['warn'](_0x35a8d8(0x15d),_0x18be10);}));let _0x29773a=[..._0x3c4950];_0x2c5c86(_0x29773a);const _0x24dfe4=_0x23550a['value'];_0x111c78['innerHTML']='';const _0x424423=_0x24d633[_0xe3d706(0x127)]['trim']();if(_0x424423){if(_0xe3d706(0x136)==='Ifwer'){const _0x4d9d3a=_0x3f49ea[_0xe3d706(0x10f)][0x0];let _0x34b8d3=_0xe3d706(0x120);for(let _0x499653=0x1;_0x499653<=_0x4d9d3a['pairings'][_0xe3d706(0xef)];_0x499653++){_0x34b8d3+=_0xe3d706(0x14e)+_0x499653+'</th>';}_0x4de6f9[_0xe3d706(0x114)]=_0xe3d706(0xfe)+_0x34b8d3+'</tr>';}else{const _0x4f4390=document[_0xe3d706(0xee)]('h1');_0x4f4390[_0xe3d706(0x161)]=_0xe3d706(0x137),_0x4f4390[_0xe3d706(0x118)]=_0x424423,_0x111c78[_0xe3d706(0xe7)](_0x4f4390);}}_0x24dfe4==='knockout'?await _0xe5b8d8(_0x29773a):await _0x48c1b2(_0x29773a),_0x646611['style']['display']=_0xe3d706(0x149),_0x395efb[_0xe3d706(0x157)]['display']=_0xe3d706(0x149);}catch(_0x5ca2de){console[_0xe3d706(0x13a)](_0xe3d706(0xfc),_0x5ca2de),alert('Đã\x20có\x20lỗi\x20xảy\x20ra.\x20Vui\x20lòng\x20kiểm\x20tra\x20Console\x20(F12)\x20để\x20biết\x20chi\x20tiết.');}finally{_0x64f6db[_0xe3d706(0x140)]=![],_0x2b5109[_0xe3d706(0x140)]=![],_0x40ca69&&_0x40ca69[_0xe3d706(0x174)]();}}function _0x55e610(){const _0x18be4f=_0x4e60b6;_0x18be4f(0x130)===_0x18be4f(0x130)?(_0x3c4950=[],_0x4bdbe5(),_0x292a8f[_0x18be4f(0x12b)](),_0x40ca69&&(_0x40ca69['pause'](),_0x40ca69[_0x18be4f(0x169)]=0x0)):(_0x3cb56c[_0x18be4f(0x169)]=0x0,_0x468cd3[_0x18be4f(0x16f)]()[_0x18be4f(0x106)](_0xa1abdf=>{const _0x3fa813=_0x18be4f;_0x2fa961[_0x3fa813(0x11d)](_0x3fa813(0x15d),_0xa1abdf);}));}function _0x2c5c86(_0x518ab1){const _0x9b0d9d=_0x4e60b6;for(let _0x2c97ba=_0x518ab1['length']-0x1;_0x2c97ba>0x0;_0x2c97ba--){const _0x2b03bf=Math[_0x9b0d9d(0x12c)](Math[_0x9b0d9d(0x122)]()*(_0x2c97ba+0x1));[_0x518ab1[_0x2c97ba],_0x518ab1[_0x2b03bf]]=[_0x518ab1[_0x2b03bf],_0x518ab1[_0x2c97ba]];}}function _0x2076e5(_0x3fd0b7){const _0x5dede6=_0x4e60b6;if(typeof _0x3fd0b7===_0x5dede6(0x13c)&&_0x3fd0b7!==null)return'<b\x20class=\x22team-name\x22\x20style=\x22color:\x20'+_0x3fd0b7['color']+'\x22>'+_0x3fd0b7['name']+_0x5dede6(0x110);return'<b\x20class=\x22team-name\x22>'+_0x3fd0b7+_0x5dede6(0x110);}async function _0xe5b8d8(_0x383e5a){const _0x2ba18b=_0x4e60b6;let _0x14328b=[..._0x383e5a];_0x14328b['length']%0x2!==0x0&&_0x14328b[_0x2ba18b(0x178)](_0x2ba18b(0x129));const _0x3f867c=document[_0x2ba18b(0xee)]('h2');_0x3f867c['className']='bracket-title',_0x3f867c[_0x2ba18b(0x118)]=_0x2ba18b(0x155),_0x111c78[_0x2ba18b(0xe7)](_0x3f867c);const _0x1195da={'roundName':_0x2ba18b(0x155),'pairings':[],'matchPrefix':_0x2ba18b(0xfb),'byeText':'Miễn\x20vòng\x201'};for(let _0xb4b060=0x0;_0xb4b060<_0x14328b[_0x2ba18b(0xef)];_0xb4b060+=0x2){_0x1195da[_0x2ba18b(0x180)][_0x2ba18b(0x178)]([_0x14328b[_0xb4b060],_0x14328b[_0xb4b060+0x1]]);}_0x335008[_0x2ba18b(0x178)](_0x1195da);const _0x1fd630=document['createElement'](_0x2ba18b(0x154));_0x1fd630[_0x2ba18b(0x161)]=_0x2ba18b(0x16d);const _0x5551dc=_0x1fd630['createTHead'](),_0x1fa40e=_0x1fd630[_0x2ba18b(0xe6)]();_0x5551dc[_0x2ba18b(0x114)]='<tr><th\x20style=\x22width:\x2033.33%;\x22>Cặp\x20đấu</th><th\x20style=\x22width:\x2066.67%;\x22>Đội\x20thi\x20đấu</th></tr>';for(let _0x5e3ec3=0x0;_0x5e3ec3<_0x14328b[_0x2ba18b(0xef)]/0x2;_0x5e3ec3++){const _0x1eca9b=_0x1fa40e['insertRow']();_0x1eca9b['insertCell']()['innerHTML']='<b>Cặp\x20'+(_0x5e3ec3+0x1)+'</b>';const _0x18121f=_0x1eca9b['insertCell']();_0x18121f[_0x2ba18b(0x114)]=_0x2076e5(_0x2ba18b(0x103))+'\x20<span\x20class=\x22vs\x22>vs</span>\x20'+_0x2076e5(_0x2ba18b(0x103));}_0x111c78['appendChild'](_0x1fd630),_0x1fd630[_0x2ba18b(0x11f)]({'behavior':_0x2ba18b(0x12f),'block':'center'}),await _0xd89fbe(_0x1fa40e[_0x2ba18b(0x133)],_0x14328b,_0x3c4950),_0x54ac77['checked']&&await _0x309d5d(_0x14328b);}async function _0x48c1b2(_0x4c90d5){const _0x2c1edf=_0x4e60b6,_0x2cf466=document[_0x2c1edf(0xee)]('h2');_0x2cf466['className']=_0x2c1edf(0x159),_0x2cf466['textContent']=_0x2c1edf(0x12e),_0x111c78['appendChild'](_0x2cf466);let _0x532485=[..._0x4c90d5];_0x532485[_0x2c1edf(0xef)]%0x2!==0x0&&_0x532485[_0x2c1edf(0x178)](_0x2c1edf(0x129));const _0x446a31=_0x532485['length'],_0xf63967=_0x446a31-0x1,_0x580b8c=_0x446a31/0x2,_0x41ea93=document[_0x2c1edf(0xee)]('table');_0x41ea93[_0x2c1edf(0x161)]=_0x2c1edf(0x16d);const _0x396dba=_0x41ea93[_0x2c1edf(0x100)](),_0x52dfa7=_0x41ea93['createTBody']();let _0x27c0c5=_0x2c1edf(0x120);for(let _0x31263f=0x1;_0x31263f<=_0x580b8c;_0x31263f++){_0x27c0c5+=_0x2c1edf(0x14e)+_0x31263f+_0x2c1edf(0x164);}_0x396dba[_0x2c1edf(0x114)]='<tr>'+_0x27c0c5+'</tr>';for(let _0x1f1337=0x0;_0x1f1337<_0xf63967;_0x1f1337++){const _0x4da0ce=_0x52dfa7[_0x2c1edf(0x135)]();_0x4da0ce[_0x2c1edf(0x15f)]()[_0x2c1edf(0x114)]='<b>Vòng\x20'+(_0x1f1337+0x1)+_0x2c1edf(0x110);for(let _0xc0ecb8=0x0;_0xc0ecb8<_0x580b8c;_0xc0ecb8++){if(_0x2c1edf(0x16c)!=='KMKqe'){const _0x555f0d=_0x260844[_0x2c1edf(0x135)](),_0x485cef=_0x3fc0f5['matchPrefix']===_0x2c1edf(0x141)?_0x2c1edf(0x141):_0x4f3993['matchPrefix']+'\x20'+(_0x498771+0x1);_0x555f0d['insertCell']()[_0x2c1edf(0x114)]=_0x2c1edf(0x17b)+_0x485cef+_0x2c1edf(0x110);const _0x3577f3=_0x555f0d[_0x2c1edf(0x15f)]();_0x45404b[_0x2c1edf(0xef)]===0x1||_0x140dbd[0x1]===null||_0x3c414a[0x1]===_0x2c1edf(0x129)?_0x3577f3['innerHTML']=_0x2ae284(_0x5d849e[0x0])+'\x20('+_0x1cbe72[_0x2c1edf(0x123)]+')':_0x3577f3[_0x2c1edf(0x114)]=_0x1579a5(_0x5f413f[0x0])+'\x20<span\x20class=\x22vs\x22>vs</span>\x20'+_0x3e2ac4(_0x58678d[0x1]);}else _0x4da0ce[_0x2c1edf(0x15f)]()['innerHTML']=''+_0x2076e5(_0x2c1edf(0x103));}}_0x111c78[_0x2c1edf(0xe7)](_0x41ea93);const _0x74cb69=[];for(let _0x1c3762=0x0;_0x1c3762<_0xf63967;_0x1c3762++){const _0x128b60=[];for(let _0x45ecaf=0x0;_0x45ecaf<_0x580b8c;_0x45ecaf++){_0x128b60['push']([_0x532485[_0x45ecaf],_0x532485[_0x446a31-0x1-_0x45ecaf]]);}_0x74cb69[_0x2c1edf(0x178)]({'roundName':_0x2c1edf(0x13d)+(_0x1c3762+0x1),'pairings':_0x128b60});const _0x35b9f0=_0x532485['pop']();_0x532485[_0x2c1edf(0x12d)](0x1,0x0,_0x35b9f0);}_0x335008=_0x74cb69,_0x41ea93[_0x2c1edf(0x11f)]({'behavior':_0x2c1edf(0x12f),'block':'center'}),await _0x5ee91b(_0x52dfa7[_0x2c1edf(0x133)],_0x74cb69,_0x3c4950);}async function _0xd89fbe(_0x314239,_0xa7e394,_0x30272a){const _0x1638b9=_0x4e60b6,_0x19afca=0x5dc,_0x1a4798=0x50;for(let _0x5ef15a=0x0;_0x5ef15a<_0x314239[_0x1638b9(0xef)];_0x5ef15a++){const _0x32d438=_0x314239[_0x5ef15a][_0x1638b9(0xe8)][0x1],_0x499bc8=setInterval(()=>{const _0xc1abf0=_0x1638b9,_0x43f12f=_0x30272a[Math[_0xc1abf0(0x12c)](Math['random']()*_0x30272a['length'])],_0x5e6f4d=_0x30272a[Math['floor'](Math[_0xc1abf0(0x122)]()*_0x30272a[_0xc1abf0(0xef)])];_0x32d438[_0xc1abf0(0x114)]=_0x2076e5(_0x43f12f)+'\x20<span\x20class=\x22vs\x22>vs</span>\x20'+_0x2076e5(_0x5e6f4d);},_0x1a4798);await new Promise(_0x34cb5f=>setTimeout(_0x34cb5f,_0x19afca)),clearInterval(_0x499bc8);const _0x30a03d=_0xa7e394[_0x5ef15a*0x2],_0x341597=_0xa7e394[_0x5ef15a*0x2+0x1];if(_0x341597===undefined)_0x32d438[_0x1638b9(0x114)]=_0x2076e5(_0x30a03d)+_0x1638b9(0x165);else _0x341597===_0x1638b9(0x129)?_0x32d438['innerHTML']=_0x2076e5(_0x30a03d)+_0x1638b9(0x147):_0x32d438['innerHTML']=_0x2076e5(_0x30a03d)+'\x20<span\x20class=\x22vs\x22>vs</span>\x20'+_0x2076e5(_0x341597);}}async function _0x5ee91b(_0x5e500a,_0x2e17ea,_0x3287e7){const _0x1396cc=_0x4e60b6,_0x173c02=0x3e8,_0x18f24e=0x50;for(let _0x59f785=0x0;_0x59f785<_0x5e500a[_0x1396cc(0xef)];_0x59f785++){const _0x337a28=Array['from'](_0x5e500a[_0x59f785][_0x1396cc(0xe8)])[_0x1396cc(0x14c)](0x1);for(let _0x3ca840=0x0;_0x3ca840<_0x337a28['length'];_0x3ca840++){const _0x30de72=_0x337a28[_0x3ca840],_0x1dfb1f=setInterval(()=>{const _0x465501=_0x1396cc,_0xb5a900=_0x3287e7[Math['floor'](Math['random']()*_0x3287e7[_0x465501(0xef)])],_0x37cf76=_0x3287e7[Math['floor'](Math['random']()*_0x3287e7['length'])];_0x30de72[_0x465501(0x114)]=_0x2076e5(_0xb5a900)+_0x465501(0x150)+_0x2076e5(_0x37cf76);},_0x18f24e);await new Promise(_0x4a9010=>setTimeout(_0x4a9010,_0x173c02)),clearInterval(_0x1dfb1f);const _0x2130ff=_0x2e17ea[_0x59f785]['pairings'][_0x3ca840],_0x3221f0=_0x2130ff[0x0],_0x337013=_0x2130ff[0x1];if(_0x3221f0===_0x1396cc(0x129))_0x30de72[_0x1396cc(0x114)]=_0x2076e5(_0x337013)+_0x1396cc(0x15e);else{if(_0x337013===_0x1396cc(0x129))_0x30de72['innerHTML']=_0x2076e5(_0x3221f0)+_0x1396cc(0x15e);else _0x30de72['innerHTML']=_0x2076e5(_0x3221f0)+_0x1396cc(0x150)+_0x2076e5(_0x337013);}}}}async function _0x309d5d(_0x1b5dd1){const _0xae43bf=_0x4e60b6;if(_0xae43bf(0x14d)!==_0xae43bf(0x11e)){let _0x58afde=null;const _0xfffe39=_0x1b5dd1[_0xae43bf(0xed)](_0xae43bf(0x129));_0xfffe39!==-0x1&&(_0x58afde=_0xfffe39%0x2===0x0?_0x1b5dd1[_0xfffe39+0x1]:_0x1b5dd1[_0xfffe39-0x1]);let _0x1a2ff7=[];for(let _0x4a3a0c=0x0;_0x4a3a0c<_0x1b5dd1['length'];_0x4a3a0c+=0x2){if(_0xae43bf(0x10c)!=='wUMTD'){const _0x540368=_0x1b5dd1[_0x4a3a0c],_0x453201=_0x1b5dd1[_0x4a3a0c+0x1];if(_0x540368===_0xae43bf(0x129))_0x1a2ff7['push'](_0x453201);else _0x453201===_0xae43bf(0x129)?_0x1a2ff7[_0xae43bf(0x178)](_0x540368):_0x1a2ff7[_0xae43bf(0x178)]('Thắng\x20Cặp\x20'+(_0x4a3a0c/0x2+0x1)+_0xae43bf(0xeb));}else{const _0xebee70=_0x1a47dd['createElement']('li');_0xebee70['textContent']=_0x282be0[_0xae43bf(0xe9)],_0xebee70['style'][_0xae43bf(0xf2)]=_0x40138d['color'];const _0x23ee86=_0x4e25f0['createElement'](_0xae43bf(0x163));_0x23ee86[_0xae43bf(0x114)]=_0xae43bf(0x17c),_0x23ee86['className']=_0xae43bf(0x176),_0x23ee86[_0xae43bf(0x107)]=()=>{const _0x5e8369=_0xae43bf;_0x120b6c[_0x5e8369(0x12d)](_0x4b81a9,0x1),_0x4eae01['forEach']((_0x29b984,_0x297757)=>{_0x29b984['color']=_0x14925e(_0x297757);}),_0x1d7eef();},_0xebee70['appendChild'](_0x23ee86),_0x22ecd4[_0xae43bf(0xe7)](_0xebee70);}}let _0x1b96e4=0x2;while(_0x1a2ff7[_0xae43bf(0xef)]>0x1){let _0xe5e639=_0xae43bf(0x13d)+_0x1b96e4;if(_0x1a2ff7[_0xae43bf(0xef)]===0x2)_0xe5e639=_0xae43bf(0x141);else{if(_0x1a2ff7[_0xae43bf(0xef)]<=0x4&&_0x1a2ff7['length']>0x2)_0xe5e639=_0xae43bf(0x146);else{if(_0x1a2ff7[_0xae43bf(0xef)]<=0x8)_0xe5e639=_0xae43bf(0x117);}}if(_0x1a2ff7[_0xae43bf(0xef)]===0x2){const _0x442130=document[_0xae43bf(0xee)]('h2');_0x442130['className']=_0xae43bf(0x159),_0x442130['textContent']=_0xae43bf(0x10b)+_0xe5e639,_0x111c78[_0xae43bf(0xe7)](_0x442130);const _0x23bd52=document['createElement']('table');_0x23bd52['className']=_0xae43bf(0x16d),_0x23bd52[_0xae43bf(0x114)]=_0xae43bf(0x121)+_0x2076e5(_0x1a2ff7[0x0])+_0xae43bf(0x150)+_0x2076e5(_0x1a2ff7[0x1])+_0xae43bf(0x138),_0x111c78[_0xae43bf(0xe7)](_0x23bd52),_0x335008[_0xae43bf(0x178)]({'roundName':_0xae43bf(0x10b)+_0xe5e639,'pairings':[_0x1a2ff7],'matchPrefix':'Chung\x20kết','byeText':''}),_0x23bd52['scrollIntoView']({'behavior':_0xae43bf(0x12f),'block':_0xae43bf(0xf8)});break;}let _0x3218c0=0x0;const _0x2cdd87=0x32;while(_0x3218c0<_0x2cdd87){_0x2c5c86(_0x1a2ff7);if(_0x1a2ff7[_0xae43bf(0xef)]%0x2===0x0)break;if(!_0x58afde)break;const _0x53478a=_0x1a2ff7[_0x1a2ff7[_0xae43bf(0xef)]-0x1],_0xab144b=typeof _0x58afde==='object'&&_0x58afde!==null?_0x58afde['name']:_0x58afde,_0x497452=typeof _0x53478a===_0xae43bf(0x13c)&&_0x53478a!==null?_0x53478a[_0xae43bf(0xe9)]:_0x53478a;if(_0xab144b!==_0x497452)break;_0x3218c0++;}const _0x580f91=document[_0xae43bf(0xee)]('h2');_0x580f91['className']=_0xae43bf(0x159),_0x580f91['textContent']='Lịch\x20thi\x20đấu\x20-\x20'+_0xe5e639,_0x111c78[_0xae43bf(0xe7)](_0x580f91);const _0x3f982d=document['createElement'](_0xae43bf(0x154));_0x3f982d['className']=_0xae43bf(0x16d);const _0x535723=_0x3f982d[_0xae43bf(0x100)](),_0x3e7b26=_0x3f982d['createTBody']();_0x535723[_0xae43bf(0x114)]=_0xae43bf(0xf3);let _0xf45733=[],_0x281ecf=null;const _0x5430bb={'roundName':_0xae43bf(0x10b)+_0xe5e639,'pairings':[],'matchPrefix':'Cặp','byeText':'Miễn\x20thi\x20đấu'};for(let _0x13a4d0=0x0;_0x13a4d0<_0x1a2ff7['length'];_0x13a4d0+=0x2){const _0x194300=_0x3e7b26['insertRow']();_0x194300['insertCell']()[_0xae43bf(0x114)]=_0xae43bf(0xf9)+(_0x13a4d0/0x2+0x1)+_0xae43bf(0x110);const _0x49180a=_0x194300['insertCell'](),_0xf45d0=_0x1a2ff7[_0x13a4d0],_0x2dbb4e=_0x1a2ff7[_0x13a4d0+0x1];_0x2dbb4e?(_0x49180a['innerHTML']=_0x2076e5('???')+'\x20<span\x20class=\x22vs\x22>vs</span>\x20'+_0x2076e5('???'),_0xf45733['push']('Thắng\x20Cặp\x20'+(_0x13a4d0/0x2+0x1)+'\x20('+_0xe5e639+')'),_0x5430bb[_0xae43bf(0x180)][_0xae43bf(0x178)]([_0xf45d0,_0x2dbb4e])):(_0x49180a[_0xae43bf(0x114)]=_0x2076e5('???')+'\x20(Miễn\x20thi\x20đấu)',_0xf45733[_0xae43bf(0x178)](_0xf45d0),_0x281ecf=_0xf45d0,_0x5430bb['pairings'][_0xae43bf(0x178)]([_0xf45d0,null]));}_0x335008[_0xae43bf(0x178)](_0x5430bb),_0x111c78[_0xae43bf(0xe7)](_0x3f982d),_0x3f982d['scrollIntoView']({'behavior':'smooth','block':'center'});let _0x518cf6=[];for(let _0x3e9950=0x0;_0x3e9950<_0x1a2ff7[_0xae43bf(0xef)];_0x3e9950+=0x2){_0x518cf6['push'](_0x1a2ff7[_0x3e9950]),_0x1a2ff7[_0x3e9950+0x1]?_0x518cf6['push'](_0x1a2ff7[_0x3e9950+0x1]):_0x518cf6['push'](undefined);}await _0xd89fbe(_0x3e7b26[_0xae43bf(0x133)],_0x518cf6,_0x1a2ff7),_0x58afde=_0x281ecf,_0x1a2ff7=_0xf45733,_0x1b96e4++;}}else _0x1414c7[_0xae43bf(0x114)]=_0x3c9f05(_0xae43bf(0x103))+'\x20(Miễn\x20thi\x20đấu)',_0xce4d95['push'](_0x5279fc),_0x5508b0=_0x21c90b,_0x135e3f[_0xae43bf(0x180)][_0xae43bf(0x178)]([_0x14f085,null]);}});function _0x51a6(){const _0xf817f1=[',\x2080%,\x2040%)','value','target','BYE','file-loader','focus','floor','splice','Lịch\x20thi\x20đấu\x20-\x20Vòng\x20tròn','smooth','ZbSOz','3830vXVSIe','href','rows','team-count','insertRow','Cpjtf','competition-print-title','</td></tr></tbody>','filter','error','File\x20không\x20hợp\x20lệ\x20hoặc\x20đã\x20bị\x20lỗi.','object','Vòng\x20','yLTYF','drum-roll-sound','disabled','Chung\x20kết','load-button','knockout-options','app-footer','stringify','Bán\x20kết','\x20(Miễn\x20vòng\x201)','getElementById','inline-block','draw-button','constructor','slice','bUBuu','<th>Cặp\x20đấu\x20','addEventListener','\x20<span\x20class=\x22vs\x22>vs</span>\x20','HIktX','format-select','Lỗi:\x20Cấu\x20trúc\x20HTML\x20không\x20hợp\x20lệ.\x20Vui\x20lòng\x20không\x20chỉnh\x20sửa\x20file\x20index.html.','table','Lịch\x20thi\x20đấu\x20-\x20Vòng\x201','format','style','BiWTv','bracket-title','33484NQGyir','search','title','Lỗi\x20file\x20âm\x20thanh\x20hoặc\x20đường\x20dẫn\x20sai,\x20bỏ\x20qua...','\x20(Nghỉ)','insertCell','none','className','teams','span','</th>','\x20(Miễn\x20thi\x20đấu)','fPfDU','matchPrefix','forEach','currentTime','parse','vofou','KMKqe','result-table','display','play','reset-button','auto-draw-checkbox','apply','roundName','pause','body','delete-team','revokeObjectURL','push','toString','Lich_thi_dau','<b>','&times;','415ksjodf','5774382fBjnES','team-input','pairings','1mhtpgf','140kuXRqq','result','createTBody','appendChild','cells','name','884894HXBrzA','\x20(Vòng\x201)','UQeoE','indexOf','createElement','length','Vui\x20lòng\x20nhập\x20ít\x20nhất\x202\x20đội.','DvxMn','color','<tr><th\x20style=\x22width:\x2033.33%;\x22>Cặp\x20đấu</th><th\x20style=\x22width:\x2066.67%;\x22>Đội\x20thi\x20đấu</th></tr>','NXFuk','172014HNxeAE','application/json','bracket-container','center','<b>Cặp\x20','Chưa\x20có\x20lịch\x20thi\x20đấu\x20để\x20lưu!','Cặp','Lỗi\x20trong\x20quá\x20trình\x20bốc\x20thăm:','8668vTRxzc','<tr>','zfMUW','createTHead','SBxnE','join','???','save-button','createObjectURL','catch','onclick','knockout','<p>Tạo\x20bởi\x20Phương\x20Mr.\x20(Gemini\x20-\x20Google\x20AI)</p>','<b>Vòng\x20','Lịch\x20thi\x20đấu\x20-\x20','mOFzZ','</th><th\x20style=\x22width:\x2066.67%;\x22>Đội\x20thi\x20đấu</th></tr>','391524eaaPQj','schedule','</b>','LMBQT','3148944kyzOgB','print','innerHTML','trim','click','Tứ\x20kết','textContent','.json','competitionName','tnUyz','Lỗi\x20parse\x20JSON:','warn','PvPaG','scrollIntoView','<th>Vòng</th>','<thead><tr><th\x20style=\x22width:\x2033.33%;\x22>Cặp\x20đấu</th><th\x20style=\x22width:\x2066.67%;\x22>Đội\x20thi\x20đấu</th></tr></thead>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<tbody><tr><td><b>Chung\x20kết</b></td><td>','random','byeText','hsl(','split'];_0x51a6=function(){return _0xf817f1;};return _0x51a6();}
+document.addEventListener('DOMContentLoaded', () => {
+    // DOM Elements
+    const competitionNameInput = document.getElementById('competition-name');
+    const teamInput = document.getElementById('team-input');
+    const addTeamsButton = document.getElementById('add-teams-button');
+    const shuffleButton = document.getElementById('shuffle-button');
+    const teamsList = document.getElementById('teams-list');
+    const formatSelect = document.getElementById('format-select');
+    const drawButton = document.getElementById('draw-button');
+    const resetButton = document.getElementById('reset-button');
+    const printButton = document.getElementById('print-button');
+    const bracketContainer = document.getElementById('bracket-container');
+	const knockoutOptions = document.getElementById('knockout-options');
+    const autoDrawCheckbox = document.getElementById('auto-draw-checkbox');
+    const appFooter = document.getElementById('app-footer');
+
+    // Kiểm tra sự tồn tại của footer, nếu không có sẽ báo lỗi và dừng ứng dụng
+    if (appFooter) {
+        appFooter.innerHTML = '<p>Tạo bởi Phương Mr. (Gemini - Google AI)</p>';
+    } else {
+        alert('Lỗi: Cấu trúc HTML không hợp lệ. Vui lòng không chỉnh sửa file index.html.');
+        return; // Dừng toàn bộ script, ứng dụng sẽ không hoạt động
+    }
+
+    const drumSound = document.getElementById('drum-roll-sound');
+    let teams = [];
+
+    // --- 1. Xử lý nhập và quản lý đội ---
+    addTeamsButton.addEventListener('click', handleAddTeams);
+    shuffleButton.addEventListener('click', handleShuffleInput);
+
+    function handleAddTeams() {
+        const inputText = teamInput.value;
+        const lines = inputText.split('\n').filter(line => line.trim() !== '');
+        lines.forEach(line => {
+            const teamName = line.trim();
+            if (teamName && !teams.some(team => team.name === teamName)) {
+                const newTeam = {
+                    name: teamName,
+                    color: generateColor(teams.length)
+                };
+                teams.push(newTeam);
+            }
+        });
+        updateTeamsList();
+        teamInput.value = '';
+    }
+
+    function handleShuffleInput() {
+        const inputText = teamInput.value;
+        let lines = inputText.split('\n').filter(line => line.trim() !== '');
+
+        shuffleArray(lines); // Gọi hàm xáo trộn có sẵn
+
+        teamInput.value = lines.join('\n'); // Nối lại thành chuỗi và gán lại vào khung nhập
+    }
+
+    function generateColor(index) {
+        const hue = (index * 40) % 360;
+        return `hsl(${hue}, 80%, 40%)`;
+    }
+
+    function updateTeamsList() {
+        teamsList.innerHTML = '';
+        teams.forEach((team, index) => {
+            const li = document.createElement('li');
+            li.textContent = team.name;
+            li.style.color = team.color;
+            const deleteSpan = document.createElement('span');
+            deleteSpan.innerHTML = '&times;';
+            deleteSpan.className = 'delete-team';
+            deleteSpan.onclick = () => {
+                teams.splice(index, 1);
+                teams.forEach((t, i) => {
+                    t.color = generateColor(i);
+                });
+                updateTeamsList();
+            };
+            li.appendChild(deleteSpan);
+            teamsList.appendChild(li);
+        });
+        bracketContainer.innerHTML = '';
+        printButton.style.display = 'none';
+    }
+	
+	// <<< THÊM LISTENER MỚI ĐỂ ẨN/HIỆN TÙY CHỌN
+    formatSelect.addEventListener('change', toggleKnockoutOptions);
+
+    function toggleKnockoutOptions() {
+        if (formatSelect.value === 'knockout') {
+            knockoutOptions.style.display = 'flex';
+        } else {
+            knockoutOptions.style.display = 'none';
+        }
+    }
+
+    // --- 2. Xử lý các nút điều khiển ---
+    drawButton.addEventListener('click', handleDraw);
+    resetButton.addEventListener('click', handleReset);
+
+    printButton.addEventListener('click', handlePrint);
+
+    function handlePrint() {
+        const originalTitle = document.title;
+        const competitionName = competitionNameInput.value.trim();
+
+        if (competitionName) {
+            document.title = competitionName; // Tạm thời đổi tiêu đề trang
+        }
+
+        window.print(); // Mở hộp thoại in
+
+        // Sau một khoảng trễ ngắn, trả lại tiêu đề cũ
+        setTimeout(() => {
+            document.title = originalTitle;
+        }, 500);
+    }
+
+    async function handleDraw() {
+        if (teams.length < 2) {
+            alert('Vui lòng nhập ít nhất 2 đội.');
+            return;
+        }
+
+        drawButton.disabled = true;
+        resetButton.disabled = true;
+
+        try {
+            if (drumSound) {
+                drumSound.currentTime = 0;
+                drumSound.play().catch(error => {
+                    console.warn("Lỗi file âm thanh hoặc đường dẫn sai, bỏ qua...", error);
+                });
+            }
+
+            let shuffledTeams = [...teams];
+            shuffleArray(shuffledTeams);
+
+            const format = formatSelect.value;
+            bracketContainer.innerHTML = '';
+
+            // <<< THÊM MỚI: Lấy và hiển thị tên giải đấu
+            const competitionName = competitionNameInput.value.trim();
+            if (competitionName) {
+                const titleElement = document.createElement('h1');
+                titleElement.className = 'competition-print-title';
+                titleElement.textContent = competitionName;
+                bracketContainer.appendChild(titleElement);
+            }
+
+            if (format === 'knockout') {
+                await generateKnockoutTable(shuffledTeams);
+            } else {
+                await generateRoundRobinSchedule(shuffledTeams);
+            }
+            printButton.style.display = 'inline-block';
+
+        } catch (error) {
+            console.error("Lỗi trong quá trình bốc thăm:", error);
+            alert("Đã có lỗi xảy ra. Vui lòng kiểm tra Console (F12) để biết chi tiết.");
+        } finally {
+            drawButton.disabled = false;
+            resetButton.disabled = false;
+            if (drumSound) {
+                drumSound.pause();
+            }
+        }
+    }
+
+    function handleReset() {
+        teams = [];
+        updateTeamsList();
+        teamInput.focus();
+        if (drumSound) {
+            drumSound.pause();
+            drumSound.currentTime = 0;
+        }
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // --- 3. Các hàm tạo kết quả ---
+    function createTeamHTML(team) {
+        if (typeof team === 'object' && team !== null) {
+            return `<b class="team-name" style="color: ${team.color}">${team.name}</b>`;
+        }
+        return `<b class="team-name">${team}</b>`;
+    }
+
+    async function generateKnockoutTable(shuffledTeams) {
+        let teamsForBracket = [...shuffledTeams];
+        if (teamsForBracket.length % 2 !== 0) {
+            teamsForBracket.push('BYE');
+        }
+
+        const title = document.createElement('h2');
+        title.className = 'bracket-title';
+        title.textContent = 'Lịch thi đấu - Vòng 1';
+        bracketContainer.appendChild(title);
+
+        const table = document.createElement('table');
+        table.className = 'result-table knockout-table';
+        const thead = table.createTHead();
+        const tbody = table.createTBody();
+        thead.innerHTML = `<tr><th style="width: 33.33%;">Cặp đấu</th><th style="width: 66.67%;">Đội thi đấu</th></tr>`;
+        for (let i = 0; i < teamsForBracket.length / 2; i++) {
+            const row = tbody.insertRow();
+            row.insertCell().innerHTML = `<b>Cặp ${i + 1}</b>`;
+            const cell = row.insertCell();
+            cell.innerHTML = `${createTeamHTML('???')} <span class="vs">vs</span> ${createTeamHTML('???')}`;
+        }
+        bracketContainer.appendChild(table);
+
+        table.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        await animateKnockoutTable(tbody.rows, teamsForBracket, teams);
+
+        // <<< THAY ĐỔI LOGIC: KIỂM TRA CHECKBOX TRƯỚC KHI TẠO CÁC VÒNG SAU
+        if (autoDrawCheckbox.checked) {
+            await generateFutureRounds(teamsForBracket);
+        }
+    }
+
+    async function generateRoundRobinSchedule(shuffledTeams) {
+        bracketContainer.innerHTML = `<h2 class="bracket-title">Lịch thi đấu - Vòng tròn</h2>`;
+        let scheduleTeams = [...shuffledTeams];
+        if (scheduleTeams.length % 2 !== 0) {
+            scheduleTeams.push("BYE");
+        }
+        const numTeams = scheduleTeams.length;
+        const numRounds = numTeams - 1;
+        const half = numTeams / 2;
+        const table = document.createElement('table');
+        table.className = 'result-table';
+        const thead = table.createTHead();
+        const tbody = table.createTBody();
+        let headerHTML = `<th>Vòng</th>`;
+        for (let i = 1; i <= half; i++) {
+            headerHTML += `<th>Cặp đấu ${i}</th>`;
+        }
+        thead.innerHTML = `<tr>${headerHTML}</tr>`;
+        for (let i = 0; i < numRounds; i++) {
+            const row = tbody.insertRow();
+            row.insertCell().innerHTML = `<b>Vòng ${i + 1}</b>`;
+            for (let j = 0; j < half; j++) {
+                row.insertCell().innerHTML = `${createTeamHTML('???')}`;
+            }
+        }
+        bracketContainer.appendChild(table);
+        const finalSchedule = [];
+        for (let round = 0; round < numRounds; round++) {
+            const roundData = [];
+            for (let i = 0; i < half; i++) {
+                roundData.push([scheduleTeams[i], scheduleTeams[numTeams - 1 - i]]);
+            }
+            finalSchedule.push(roundData);
+            const lastTeam = scheduleTeams.pop();
+            scheduleTeams.splice(1, 0, lastTeam);
+        }
+        table.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Chờ animation hoàn tất
+        await animateRoundRobinSchedule(tbody.rows, finalSchedule, teams);
+        // Sau đó mới bật lại nút
+        drawButton.disabled = false;
+        resetButton.disabled = false;
+        if (drumSound) drumSound.pause();
+    }
+
+    async function animateKnockoutTable(rows, finalResult, allTeams) {
+        const animationTimePerCell = 2000;
+        const spinSpeed = 80;
+        for (let i = 0; i < rows.length; i++) {
+            const cell = rows[i].cells[1];
+            const intervalId = setInterval(() => {
+                const randomTeam1 = allTeams[Math.floor(Math.random() * allTeams.length)];
+                const randomTeam2 = allTeams[Math.floor(Math.random() * allTeams.length)];
+                cell.innerHTML = `${createTeamHTML(randomTeam1)} <span class="vs">vs</span> ${createTeamHTML(randomTeam2)}`;
+            }, spinSpeed);
+            await new Promise(resolve => setTimeout(resolve, animationTimePerCell));
+            clearInterval(intervalId);
+            const team1 = finalResult[i * 2];
+            const team2 = finalResult[i * 2 + 1];
+
+            if (team2 === undefined) { // Xử lý đội miễn đấu ở các vòng sau
+                cell.innerHTML = `${createTeamHTML(team1)} (Miễn thi đấu)`;
+            }
+            else if (team2 === 'BYE') { // Xử lý đội miễn đấu ở Vòng 1
+                cell.innerHTML = `${createTeamHTML(team1)} (Miễn vòng 1)`;
+            } else { // Xử lý trận đấu bình thường
+                cell.innerHTML = `${createTeamHTML(team1)} <span class="vs">vs</span> ${createTeamHTML(team2)}`;
+            }
+        }
+    }
+
+    async function animateRoundRobinSchedule(rows, finalSchedule, allTeams) {
+        const animationTimePerCell = 2000;
+        const spinSpeed = 80;
+        for (let i = 0; i < rows.length; i++) {
+            const cellsToAnimate = Array.from(rows[i].cells).slice(1);
+            for (let j = 0; j < cellsToAnimate.length; j++) {
+                const cell = cellsToAnimate[j];
+                const intervalId = setInterval(() => {
+                    const randomTeam1 = allTeams[Math.floor(Math.random() * allTeams.length)];
+                    const randomTeam2 = allTeams[Math.floor(Math.random() * allTeams.length)];
+                    cell.innerHTML = `${createTeamHTML(randomTeam1)} <span class="vs">vs</span> ${createTeamHTML(randomTeam2)}`;
+                }, spinSpeed);
+                await new Promise(resolve => setTimeout(resolve, animationTimePerCell));
+                clearInterval(intervalId);
+                const matchData = finalSchedule[i][j];
+                const team1 = matchData[0];
+                const team2 = matchData[1];
+                if (team1 === "BYE") cell.innerHTML = `${createTeamHTML(team2)} (Nghỉ)`;
+                else if (team2 === "BYE") cell.innerHTML = `${createTeamHTML(team1)} (Nghỉ)`;
+                else cell.innerHTML = `${createTeamHTML(team1)} <span class="vs">vs</span> ${createTeamHTML(team2)}`;
+            }
+        }
+    }
+    // HÀM TẠO CÁC VÒNG ĐẤU SAU
+    async function generateFutureRounds(firstRoundPairings) {
+        let lastByeParticipant = null;
+
+        const byeIndex = firstRoundPairings.indexOf('BYE');
+        if (byeIndex !== -1) {
+            lastByeParticipant = (byeIndex % 2 === 0) ? firstRoundPairings[byeIndex + 1] : firstRoundPairings[byeIndex - 1];
+        }
+
+        let currentRoundParticipants = [];
+        for (let i = 0; i < firstRoundPairings.length; i += 2) {
+            const team1 = firstRoundPairings[i];
+            const team2 = firstRoundPairings[i + 1];
+            if (team1 === 'BYE') {
+                currentRoundParticipants.push(team2);
+            } else if (team2 === 'BYE') {
+                currentRoundParticipants.push(team1);
+            } else {
+                currentRoundParticipants.push(`Thắng Cặp ${i / 2 + 1} (Vòng 1)`);
+            }
+        }
+
+        let roundNumber = 2;
+        while (currentRoundParticipants.length > 1) {
+
+            if (currentRoundParticipants.length === 2) {
+                const finalTitle = document.createElement('h2');
+                finalTitle.className = 'bracket-title';
+                finalTitle.textContent = `Lịch thi đấu - Chung kết`;
+                bracketContainer.appendChild(finalTitle);
+                const finalTable = document.createElement('table');
+                finalTable.className = 'result-table';
+                finalTable.innerHTML = `<thead><tr><th style="width: 33.33%;">Cặp đấu</th><th style="width: 66.67%;">Đội thi đấu</th></tr></thead>
+                <tbody><tr><td><b>Chung kết</b></td><td>${createTeamHTML(currentRoundParticipants[0])} <span class="vs">vs</span> ${createTeamHTML(currentRoundParticipants[1])}</td></tr></tbody>`;
+                bracketContainer.appendChild(finalTable);
+                finalTable.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                break;
+            }
+
+            // <<< CẬP NHẬT LOGIC CHỐNG MIỄN ĐẤU 2 LẦN
+            let attempts = 0;
+            const maxAttempts = 50; // Giới hạn an toàn
+            while (attempts < maxAttempts) {
+                shuffleArray(currentRoundParticipants);
+
+                // Nếu số đội là chẵn, không có miễn đấu, bốc thăm luôn hợp lệ
+                if (currentRoundParticipants.length % 2 === 0) {
+                    break;
+                }
+
+                // Nếu vòng trước không có ai miễn đấu, bốc thăm luôn hợp lệ
+                if (!lastByeParticipant) {
+                    break;
+                }
+
+                // Lấy ra suất miễn đấu tiềm năng của vòng này
+                const potentialByeParticipant = currentRoundParticipants[currentRoundParticipants.length - 1];
+
+                // Lấy định danh (tên) để so sánh
+                const lastByeIdentifier = (typeof lastByeParticipant === 'object' && lastByeParticipant !== null) ? lastByeParticipant.name : lastByeParticipant;
+                const potentialByeIdentifier = (typeof potentialByeParticipant === 'object' && potentialByeParticipant !== null) ? potentialByeParticipant.name : potentialByeParticipant;
+
+                // Nếu suất miễn đấu vòng này KHÁC với vòng trước, bốc thăm hợp lệ
+                if (lastByeIdentifier !== potentialByeIdentifier) {
+                    break;
+                }
+
+                // Nếu giống nhau, tiếp tục vòng lặp để xáo trộn lại
+                attempts++;
+            }
+
+            const title = document.createElement('h2');
+            title.className = 'bracket-title';
+            let roundName = `Vòng ${roundNumber}`;
+            if (currentRoundParticipants.length <= 4 && currentRoundParticipants.length > 2) roundName = "Bán kết";
+            else if (currentRoundParticipants.length <= 8) roundName = "Tứ kết";
+            title.textContent = `Lịch thi đấu - ${roundName}`;
+            bracketContainer.appendChild(title);
+
+            const table = document.createElement('table');
+            table.className = 'result-table';
+            const thead = table.createTHead();
+            const tbody = table.createTBody();
+            thead.innerHTML = `<tr><th style="width: 33.33%;">Cặp đấu</th><th style="width: 66.67%;">Đội thi đấu</th></tr>`;
+
+            let nextRoundParticipants = [];
+            let currentByeInThisRound = null;
+
+            for (let i = 0; i < currentRoundParticipants.length; i += 2) {
+                const row = tbody.insertRow();
+                row.insertCell().innerHTML = `<b>Cặp ${i / 2 + 1}</b>`;
+                const cellMatchup = row.insertCell();
+                const participant1 = currentRoundParticipants[i];
+                const participant2 = currentRoundParticipants[i + 1];
+                if (participant2) {
+                    cellMatchup.innerHTML = `${createTeamHTML('???')} <span class="vs">vs</span> ${createTeamHTML('???')}`;
+                    nextRoundParticipants.push(`Thắng Cặp ${i / 2 + 1} (${roundName})`);
+                } else {
+                    cellMatchup.innerHTML = `${createTeamHTML('???')} (Miễn thi đấu)`;
+                    nextRoundParticipants.push(participant1);
+                    currentByeInThisRound = participant1;
+                }
+            }
+            bracketContainer.appendChild(table);
+            table.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            let animationResult = [];
+            for (let i = 0; i < currentRoundParticipants.length; i += 2) {
+                animationResult.push(currentRoundParticipants[i]);
+                if (currentRoundParticipants[i + 1]) {
+                    animationResult.push(currentRoundParticipants[i + 1]);
+                } else {
+                    animationResult.push(undefined);
+                }
+            }
+
+            await animateKnockoutTable(tbody.rows, animationResult, currentRoundParticipants);
+
+            lastByeParticipant = currentByeInThisRound;
+            currentRoundParticipants = nextRoundParticipants;
+            roundNumber++;
+        }
+    }
+});
